@@ -1,29 +1,31 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 
-public class Principal extends PApplet
-{
+public class Principal extends PApplet {
 
-	public static void main(String[] args) 
-	{
+	PImage img;
+
+	public static void main(String[] args) {
 		PApplet.main("Principal");
 	}
-	
+
 	@Override
-	public void settings() //void Awake
+	public void settings() // void Awake
 	{
-		size(500, 500);
+		size(1440, 1024);
+		img = loadImage("Pantalla Inicio.png");
 	}
-	
+
 	@Override
-	public void setup() //void Start
+	public void setup() // void Start
 	{
-		
+
 	}
-	
+
 	@Override
-	public void draw() //void Update
-	{		
-		
+	public void draw() // void Update
+	{
+		image(img, 0, 0);
 	}
 
 }

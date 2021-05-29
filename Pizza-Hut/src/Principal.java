@@ -43,7 +43,15 @@ public class Principal extends PApplet {
 	@Override
 	public void setup() // void Start
 	{
-
+		//firstscreen= new FirstScreen(0,this);
+		//registerscreen= new RegisterScreen(0,this);
+		//catalogscreen= new CatalogScreen(0,this);
+		//paymentscreen= new PaymentScreen(0,this);
+		//goodscreen= new GoodScreen(0,this);
+		//summaryscreen= new SummaryScreen(0,this);
+		//outscreen= new OutScreen(0,this);
+	
+		
 	}
 
 	@Override

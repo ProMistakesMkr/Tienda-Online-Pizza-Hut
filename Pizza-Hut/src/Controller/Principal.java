@@ -1,3 +1,4 @@
+package Controller;
 import processing.core.PApplet;
 import processing.core.PImage;
 import view.FirstScreen;
@@ -40,7 +41,7 @@ public class Principal extends PApplet {
 		img = loadImage("Pantalla Inicio.png");
 	}
 
-	@Override
+
 	public void setup() // void Start
 	{
 		//firstscreen= new FirstScreen(0,this);
@@ -54,7 +55,7 @@ public class Principal extends PApplet {
 		
 	}
 
-	@Override
+	
 	public void draw() // void Update
 	{
 		image(img, 0, 0);

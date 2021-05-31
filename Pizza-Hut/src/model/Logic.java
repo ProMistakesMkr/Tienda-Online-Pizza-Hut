@@ -348,34 +348,34 @@ public class Logic {
 				// Variable para siempre editar la ultima orden
 				int lastPos = userList.get(0).getOrderList().size() - 1;
 
-				// extras: papas y queso
+				// extras: coke y choco
 				if (addCoke && addChocoRoll) {
-					userList.get(0).getOrderList().get(lastPos).addExtra1("Papas francesas", 5500);
-					userList.get(0).getOrderList().get(lastPos).addExtra2("Queso fundido", 4500);
+					userList.get(0).getOrderList().get(lastPos).addExtra1("Coca-Cola", 5500);
+					userList.get(0).getOrderList().get(lastPos).addExtra2("Chocoroll", 4500);
 					userList.get(0).getOrderList().get(lastPos)
 							.setOrderTotal(userList.get(0).getOrderList().get(lastPos).calculateTotal());
 				}
 
-				// extras: papas y suero
+				// extras: coke y cookiepie
 				else if (addCoke && addCookiePie) {
-					userList.get(0).getOrderList().get(lastPos).addExtra1("Papas francesas", 5500);
-					userList.get(0).getOrderList().get(lastPos).addExtra2("Suero costeño", 3000);
+					userList.get(0).getOrderList().get(lastPos).addExtra1("Coca-Cola", 5500);
+					userList.get(0).getOrderList().get(lastPos).addExtra2("CookiePie", 3000);
 					userList.get(0).getOrderList().get(lastPos)
 							.setOrderTotal(userList.get(0).getOrderList().get(lastPos).calculateTotal());
 				}
 
-				// extras: anillos y queso
+				// extras: Colombiana y Chocoroll
 				else if (addColombiana && addChocoRoll) {
-					userList.get(0).getOrderList().get(lastPos).addExtra1("Anillos de cebolla", 7500);
-					userList.get(0).getOrderList().get(lastPos).addExtra2("Queso fundido", 4500);
+					userList.get(0).getOrderList().get(lastPos).addExtra1("Colombiana", 7500);
+					userList.get(0).getOrderList().get(lastPos).addExtra2("ChocoRoll", 4500);
 					userList.get(0).getOrderList().get(lastPos)
 							.setOrderTotal(userList.get(0).getOrderList().get(lastPos).calculateTotal());
 				}
 
-				// extras: anillos y suero
+				// extras: colombiana y cookiepie
 				else if (addColombiana && addCookiePie) {
-					userList.get(0).getOrderList().get(lastPos).addExtra1("Anillos de cebolla", 7500);
-					userList.get(0).getOrderList().get(lastPos).addExtra2("Suero costeño", 3000);
+					userList.get(0).getOrderList().get(lastPos).addExtra1("Colombiana", 7500);
+					userList.get(0).getOrderList().get(lastPos).addExtra2("CookiePie", 3000);
 					userList.get(0).getOrderList().get(lastPos)
 							.setOrderTotal(userList.get(0).getOrderList().get(lastPos).calculateTotal());
 				}

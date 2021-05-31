@@ -9,7 +9,6 @@ import processing.core.PApplet;
 public class RegisterScreen extends ScreenManager {
 	ControlP5 cp5;
 
-	private String name;
 	private String mail;
 	private String pass;
 
@@ -59,15 +58,12 @@ public class RegisterScreen extends ScreenManager {
 	public boolean isNull() {
 		if (cp5.get(Textfield.class, ".").getText().trim().isEmpty()
 				|| cp5.get(Textfield.class, "-").getText().trim().isEmpty()) {
-			JOptionPane.showMessageDialog(null, "Fill the blanks", "ERROR",
-					JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Fill the blanks", "ERROR", JOptionPane.ERROR_MESSAGE);
 			return true;
 		} else {
 			return false;
 		}
 	}
-
-
 
 	public String getMail() {
 		return mail;

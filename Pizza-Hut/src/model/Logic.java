@@ -12,7 +12,6 @@ import processing.core.PFont;
 import processing.core.PImage;
 import view.AddExtraScreen;
 import view.PaymentScreen;
-import view.HomeScreen;
 import view.CatalogScreen;
 import view.LogInScreen;
 import view.OrderHistory;

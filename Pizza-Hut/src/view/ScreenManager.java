@@ -6,7 +6,7 @@ import processing.core.PImage;
 public abstract class ScreenManager {
 	protected PApplet app;
 	  PImage Login,Register,Home,ExtrasMarga,ExtrasVege,ExtrasCheese,ExtrasChampi,Resumen,Pago,History;
-	  public Screen(PApplet app) {
+	  public ScreenManager(PApplet app) {
 		  this.app = app;
 		  Login = app.loadImage ("img/PantallaLogIn.png");
 		  Register = app.loadImage ("img/PantallaRegistro.png");
@@ -17,7 +17,7 @@ public abstract class ScreenManager {
 		  ExtrasChampi = app.loadImage ("img/PantallaChampiñon.png");
 		  Resumen = app.loadImage ("img/PantallaResumen.png");
 		  Pago = app.loadImage ("img/PantallaPago.png");
-		  //History = app.loadImage ("img/History.png");
+		  History = app.loadImage ("img/History.png");
 	  }
 	  public abstract void draw ();
 }

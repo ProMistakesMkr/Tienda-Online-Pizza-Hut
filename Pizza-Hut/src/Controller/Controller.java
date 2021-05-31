@@ -1,4 +1,4 @@
-package controller;
+package Controller;
 
 import controlP5.ControlP5;
 import model.Logic;

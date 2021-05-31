@@ -2,15 +2,15 @@ package view;
 
 import processing.core.PApplet;
 
-public class PaymentScreen extends ScreenManager {
-	 
-	public PaymentScreen(PApplet app) {
+public class OrderHistory extends ScreenManager {
+	
+	public OrderHistory (PApplet app) {
 	        super(app);
 	    }
 
 	@Override
 	public void draw() {
-		  app.image(Pago,0,0);
+		  app.image(History,0,0);
 		
 	}
 

@@ -10,21 +10,14 @@ public class User {
 	
 	private ArrayList<Order> orderList;
 	
-	public User(String name, String email, String password) {
-		this.name = name;
+	public User(String email, String password) {
 		this.email = email;
 		this.password = password;
 		
 		orderList = new ArrayList<Order>();
 	}
 
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getEmail() {
 		return email;

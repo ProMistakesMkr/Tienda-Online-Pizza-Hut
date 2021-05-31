@@ -24,7 +24,7 @@ public class LogInScreen extends ScreenManager {
 	
 	public void textFields() {
 		 cp5.addTextfield("correo")
-		 .setPosition(64, 408)
+		 .setPosition(520, 429)
 		 .setSize(285,61)
 		 .setFont(app.createFont("arial",16))
 		 .setAutoClear(false)
@@ -34,7 +34,7 @@ public class LogInScreen extends ScreenManager {
 		 .getCaptionLabel().setColor(app.color(255,235,207));
 		 
 		 cp5.addTextfield("contraseña")
-		 .setPosition(64, 520)
+		 .setPosition(516, 533)
 		 .setSize(285,61)
 		 .setFont(app.createFont("arial",16))
 		 .setAutoClear(false)

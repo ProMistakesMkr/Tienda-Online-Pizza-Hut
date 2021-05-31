@@ -172,7 +172,7 @@ public class Logic {
 		switch(screen) {
 		case 1:
 			//De Login a Register
-			if((257<app.mouseX&&app.mouseX<327)&&(607<app.mouseY&&app.mouseY<616)) {
+			if((712<app.mouseX&&app.mouseX<1030)&&(177<app.mouseY&&app.mouseY<237)) {
 				screen=2;
 				login.clear();
 				login.hide();
@@ -180,7 +180,7 @@ public class Logic {
 
 			}
 			//De Login a Home
-			if((63<app.mouseX&&app.mouseX<348)&&(773<app.mouseY&&app.mouseY<833)) {
+			if((516<app.mouseX&&app.mouseX<937)&&(651<app.mouseY&&app.mouseY<700)) {
 				login.textfieldValues();
 				for (int i = 0; i < userList.size(); i++) {
 					if((userList.get(i).getEmail().equals(login.getMail()))&&
@@ -192,21 +192,21 @@ public class Logic {
 						userList.get(0).newOrder("XXXXXX", date, 8000000,0);
 					}
 				}if(!loginSucc) {
-					JOptionPane.showMessageDialog(null, "El usuario no está registrado", "Woops", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "User not registered", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 				
 			}
 			break;
 		case 2:
 			//De Register a Login "Iniciar sesión"
-			if((222<app.mouseX&&app.mouseX<300)&&(677<app.mouseY&&app.mouseY<689)) {
+			if((398<app.mouseX&&app.mouseX<703)&&(189<app.mouseY&&app.mouseY<232)) {
 				screen=1;
 				register.clear();
 				register.hide();
 				login.show();
 			}
 			//De Register a Login "Registrarse"
-			if((63<app.mouseX&&app.mouseX<348)&&(773<app.mouseY&&app.mouseY<833)) {
+			if((515<app.mouseX&&app.mouseX<934)&&(650<app.mouseY&&app.mouseY<700)) {
 				if(!register.isNull()) {
 				register.textfieldValues();
 				registerUser();
@@ -411,7 +411,7 @@ public class Logic {
 	
 	public void registerUser() {
 		
-		userList.add(new User(register.getName(), register.getMail(), register.getPass()));
+		userList.add(new User(register.getMail(), register.getPass()));
 		
 		
 	}

@@ -10,7 +10,7 @@ public abstract class ScreenManager {
 		  this.app = app;
 		  Login = app.loadImage ("img/PantallaLogIn.png");
 		  Register = app.loadImage ("img/PantallaRegistro.png");
-		  Home = app.loadImage ("img/PantallaInicio.png");
+		  Home = app.loadImage ("img/PantallaCatalogo.png");
 		  ExtrasMarga = app.loadImage ("img/PantallaMargarita.png");
 		  ExtrasVege = app.loadImage ("img/PantallaVegetariana.png");
 		  ExtrasCheese = app.loadImage ("img/PantallaCheese.png");

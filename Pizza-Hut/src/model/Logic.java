@@ -57,7 +57,6 @@ public class Logic {
 		screen = 1;
 		login = new LogInScreen(app);
 		register = new RegisterScreen(app);
-		home = new CatalogScreen(app);
 		extra = new AddExtraScreen(app);
 		pay = new PaymentScreen(app);
 		summary = new OrderSummary(app);

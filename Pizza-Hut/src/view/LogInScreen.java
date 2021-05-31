@@ -23,7 +23,7 @@ public class LogInScreen extends ScreenManager {
 	}
 	
 	public void textFields() {
-		 cp5.addTextfield("correo")
+		 cp5.addTextfield(".")
 		 .setPosition(520, 429)
 		 .setSize(285,61)
 		 .setFont(app.createFont("arial",16))
@@ -33,7 +33,7 @@ public class LogInScreen extends ScreenManager {
 		 .setColorForeground(app.color(0,0,0,1))
 		 .getCaptionLabel().setColor(app.color(255,235,207));
 		 
-		 cp5.addTextfield("contraseña")
+		 cp5.addTextfield("-")
 		 .setPosition(516, 533)
 		 .setSize(285,61)
 		 .setFont(app.createFont("arial",16))
@@ -48,20 +48,20 @@ public class LogInScreen extends ScreenManager {
 	}
 	
 	public void hide() {
-		cp5.get("correo").hide();
-		cp5.get("contraseña").hide();
+		cp5.get(".").hide();
+		cp5.get("-").hide();
 	}
 	public void show() {
-		cp5.get("correo").show();
-		cp5.get("contraseña").show();
+		cp5.get(".").show();
+		cp5.get("-").show();
 	}
 public void clear() {
-	cp5.get(Textfield.class,"correo").clear();
-	cp5.get(Textfield.class,"contraseña").clear();
+	cp5.get(Textfield.class,".").clear();
+	cp5.get(Textfield.class,"-").clear();
 }
 public void textfieldValues() {
-	mail = cp5.get(Textfield.class,"correo").getText();
-	pass = cp5.get(Textfield.class,"contraseña").getText();
+	mail = cp5.get(Textfield.class,".").getText();
+	pass = cp5.get(Textfield.class,"-").getText();
 }
 public String getMail() {
 	return mail;

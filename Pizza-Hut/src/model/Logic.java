@@ -76,10 +76,10 @@ public class Logic {
 
 		loginSucc = false;
 
-		coke = app.loadImage("img/chips.png");
-		colombiana = app.loadImage("img/Onion Rings.png");
-		chocoRoll = app.loadImage("img/Cheese.png");
-		cookiePie = app.loadImage("img/Suero.png");
+		coke = app.loadImage("img/PantallaCoca.png");
+		colombiana = app.loadImage("img/PantallaColo.png");
+		chocoRoll = app.loadImage("img/PantallaChoco.png");
+		cookiePie = app.loadImage("img/PantallaCook.png");
 
 		login.textFields();
 		register.textFields();
@@ -279,28 +279,28 @@ public class Logic {
 				chooseCheese = false;
 			}
 			// Añade coke
-			if ((39 < app.mouseX && app.mouseX < 376) && (415 < app.mouseY && app.mouseY < 469)) {
+			if ((351 < app.mouseX && app.mouseX < 697) && (582 < app.mouseY && app.mouseY < 728)) {
 				if (!validPay) {
 					addCoke = true;
 					addColombiana = false;
 				}
 			}
 			// Añade colombiana
-			if ((39 < app.mouseX && app.mouseX < 376) && (487 < app.mouseY && app.mouseY < 541)) {
+			if ((341 < app.mouseX && app.mouseX < 728) && (765 < app.mouseY && app.mouseY < 933)) {
 				if (!validPay) {
 					addColombiana = true;
 					addCoke = false;
 				}
 			}
 			// Añade chocoroll
-			if ((39 < app.mouseX && app.mouseX < 376) && (605 < app.mouseY && app.mouseY < 659)) {
+			if ((822 < app.mouseX && app.mouseX < 1257) && (601 < app.mouseY && app.mouseY < 732)) {
 				if (!validPay) {
 					addChocoRoll = true;
 					addCookiePie = false;
 				}
 			}
 			// Añade cookiepie
-			if ((39 < app.mouseX && app.mouseX < 376) && (677 < app.mouseY && app.mouseY < 731)) {
+			if ((823 < app.mouseX && app.mouseX < 1253) && (776 < app.mouseY && app.mouseY < 900)) {
 				if (!validPay) {
 					addCookiePie = true;
 					addChocoRoll = false;

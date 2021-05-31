@@ -165,7 +165,7 @@ public class Logic {
 			break;
 		case 6:
 			history.draw();
-			// Lista de pedidos
+			
 			for (int i = 1; i < userList.get(0).getOrderList().size(); i++) {
 				app.text(
 						"Pedido #" + i + " - " + "$" + userList.get(0).getOrderList().get(i).getOrderTotal() + "\n"
@@ -180,7 +180,7 @@ public class Logic {
 	public void mousePressed() {
 		switch (screen) {
 		case 1:
-			// De Login a Register
+			
 			if ((712 < app.mouseX && app.mouseX < 1030) && (177 < app.mouseY && app.mouseY < 237)) {
 				screen = 2;
 				login.clear();
@@ -188,7 +188,7 @@ public class Logic {
 				register.show();
 
 			}
-			// De Login a Home
+			
 			if ((516 < app.mouseX && app.mouseX < 937) && (651 < app.mouseY && app.mouseY < 700)) {
 				login.textfieldValues();
 				for (int i = 0; i < userList.size(); i++) {
@@ -208,14 +208,14 @@ public class Logic {
 			}
 			break;
 		case 2:
-			// De Register a Login "Iniciar sesión"
+			
 			if ((398 < app.mouseX && app.mouseX < 703) && (189 < app.mouseY && app.mouseY < 232)) {
 				screen = 1;
 				register.clear();
 				register.hide();
 				login.show();
 			}
-			// De Register a Login "Registrarse"
+		
 			if ((515 < app.mouseX && app.mouseX < 934) && (650 < app.mouseY && app.mouseY < 700)) {
 				if (!register.isNull()) {
 					register.textfieldValues();
@@ -266,7 +266,7 @@ public class Logic {
 			}
 			
 		case 4:
-			// De Extra a Home
+			
 			if ((57 < app.mouseX && app.mouseX < 300) && (20 < app.mouseY && app.mouseY < 78)) {
 				screen = 3;
 				addCoke = false;
@@ -317,24 +317,24 @@ public class Logic {
 			if ((validPay) && (65 < app.mouseX && app.mouseX < 348) && (736 < app.mouseY && app.mouseY < 789)) {
 				validPay = false;
 				screen = 5;
-				// Se crea orden con Corral
+				
 				if (chooseMargarita) {
 					date = new Date();
-					userList.get(0).newOrder("Corral", date, 14000, 0);
-				} // Se crea orden con Corral queso
+					userList.get(0).newOrder(".", date, 14000, 0);
+				} 
 				else if (chooseChampi) {
 					date = new Date();
-					userList.get(0).newOrder("Corral queso", date, 16000, 0);
+					userList.get(0).newOrder(".", date, 16000, 0);
 				}
-				// Se crea orden con Corral tocineta
+				
 				else if (chooseveg) {
 					date = new Date();
-					userList.get(0).newOrder("Corral tocineta", date, 19000, 0);
+					userList.get(0).newOrder("..", date, 19000, 0);
 				}
-				// Se crea orden con Corral pollo
+				
 				else if (chooseCheese) {
 					date = new Date();
-					userList.get(0).newOrder("Corral pollo", date, 15000, 0);
+					userList.get(0).newOrder(".", date, 15000, 0);
 				}
 				// Variable para siempre editar la ultima orden
 				int lastPos = userList.get(0).getOrderList().size() - 1;

@@ -264,16 +264,7 @@ public class Logic {
 				chooseveg = false;
 				chooseMargarita = false;
 			}
-			// De Home a History
-			if ((195 < app.mouseX && app.mouseX < 215) && (830 < app.mouseY && app.mouseY < 857)) {
-				screen = 6;
-			}
-			// De Home a Login (Cerrar sesion)
-			if ((296 < app.mouseX && app.mouseX < 320) && (830 < app.mouseY && app.mouseY < 857)) {
-				screen = 1;
-				login.show();
-			}
-			break;
+			
 		case 4:
 			// De Extra a Home
 			if ((57 < app.mouseX && app.mouseX < 300) && (20 < app.mouseY && app.mouseY < 78)) {

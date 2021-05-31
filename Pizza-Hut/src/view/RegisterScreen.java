@@ -9,7 +9,7 @@ import processing.core.PApplet;
 public class RegisterScreen extends ScreenManager {
 	ControlP5 cp5;
 
-	
+	private String name;
 	private String mail;
 	private String pass;
 
@@ -26,39 +26,39 @@ public class RegisterScreen extends ScreenManager {
 
 	public void textFields() {
 
-		cp5.addTextfield(".").setPosition(520, 429).setSize(285, 61).setFont(app.createFont("arial", 16))
+		cp5.addTextfield("correo").setPosition(520, 429).setSize(285, 61).setFont(app.createFont("arial", 16))
 				.setAutoClear(false).setColor(app.color(62, 36, 32)).setColorBackground(app.color(0, 0, 0, 1))
 				.setColorForeground(app.color(0, 0, 0, 1)).getCaptionLabel().setColor(app.color(255, 235, 207));
 
-		cp5.addTextfield("-").setPosition(516, 533).setSize(285, 61).setFont(app.createFont("arial", 16))
+		cp5.addTextfield("contraseña").setPosition(516, 533).setSize(285, 61).setFont(app.createFont("arial", 16))
 				.setAutoClear(false).setColor(app.color(62, 36, 32)).setColorBackground(app.color(0, 0, 0, 1))
 				.setColorForeground(app.color(0, 0, 0, 1)).getCaptionLabel().setColor(app.color(255, 235, 207));
 
 	}
 
 	public void hide() {
-		cp5.get(".").hide();
-		cp5.get("-").hide();
+		cp5.get("correo").hide();
+		cp5.get("contraseña").hide();
 	}
 
 	public void show() {
-		cp5.get(".").show();
-		cp5.get("-").show();
+		cp5.get("correo").show();
+		cp5.get("contraseña").show();
 	}
 
 	public void clear() {
-		cp5.get(Textfield.class, ".").clear();
-		cp5.get(Textfield.class, "-").clear();
+		cp5.get(Textfield.class, "correo").clear();
+		cp5.get(Textfield.class, "contraseña").clear();
 	}
 
 	public void textfieldValues() {
-		mail = cp5.get(Textfield.class, ".").getText();
-		pass = cp5.get(Textfield.class, "-").getText();
+		mail = cp5.get(Textfield.class, "correo").getText();
+		pass = cp5.get(Textfield.class, "contraseña").getText();
 	}
 
 	public boolean isNull() {
-		if (cp5.get(Textfield.class, ".").getText().trim().isEmpty()
-				|| cp5.get(Textfield.class, "-").getText().trim().isEmpty()) {
+		if (cp5.get(Textfield.class, "correo").getText().trim().isEmpty()
+				|| cp5.get(Textfield.class, "contraseña").getText().trim().isEmpty()) {
 			JOptionPane.showMessageDialog(null, "Todos los campos deben estar llenos.", "Woops",
 					JOptionPane.ERROR_MESSAGE);
 			return true;

@@ -35,18 +35,18 @@ public class Logic {
 	private OrderSummary summary;
 	private OrderHistory history;
 	private boolean validPay;
-	private boolean addChips;
-	private boolean addOnionRings;
-	private boolean addCheese;
-	private boolean addSuero;
-	private boolean chooseCorral;
+	private boolean addCoke;
+	private boolean addColombiana;
+	private boolean addChocoRoll;
+	private boolean addCookiePie;
+	private boolean chooseMargarita;
+	private boolean chooseChampi;
+	private boolean chooseveg;
 	private boolean chooseCheese;
-	private boolean chooseBacon;
-	private boolean chooseChicken;
 	private Date date;
 	private SimpleDateFormat datePrintter;
 	private boolean loginSucc;
-	private PImage chips, onionRings, cheese, suero;
+	private PImage coke, colombiana, chocoRoll, cookiePie;
 	private ArrayList<User> userList;
 	private DateApplier dateComp;
 
@@ -63,23 +63,23 @@ public class Logic {
 		summary = new OrderSummary(app);
 		history = new OrderHistory(app);
 		validPay = false;
-		addChips = false;
-		addOnionRings = false;
-		addCheese = false;
-		addSuero = false;
-		chooseCorral = false;
+		addCoke = false;
+		addColombiana = false;
+		addChocoRoll = false;
+		addCookiePie = false;
+		chooseMargarita = false;
+		chooseChampi = false;
+		chooseveg = false;
 		chooseCheese = false;
-		chooseBacon = false;
-		chooseChicken = false;
 		date = new Date();
 		datePrintter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
 		loginSucc = false;
 
-		chips = app.loadImage("img/chips.png");
-		onionRings = app.loadImage("img/Onion Rings.png");
-		cheese = app.loadImage("img/Cheese.png");
-		suero = app.loadImage("img/Suero.png");
+		coke = app.loadImage("img/chips.png");
+		colombiana = app.loadImage("img/Onion Rings.png");
+		chocoRoll = app.loadImage("img/Cheese.png");
+		cookiePie = app.loadImage("img/Suero.png");
 
 		login.textFields();
 		register.textFields();
@@ -104,20 +104,20 @@ public class Logic {
 		case 4:
 			extra.draw();
 
-			if (addChips) {
-				app.image(chips, 0, 0);
+			if (addCoke) {
+				app.image(coke, 0, 0);
 			}
 
-			if (addOnionRings) {
-				app.image(onionRings, 0, 0);
+			if (addColombiana) {
+				app.image(colombiana, 0, 0);
 			}
 
-			if (addCheese) {
-				app.image(cheese, 0, 0);
+			if (addChocoRoll) {
+				app.image(chocoRoll, 0, 0);
 			}
 
-			if (addSuero) {
-				app.image(suero, 0, 0);
+			if (addCookiePie) {
+				app.image(cookiePie, 0, 0);
 			}
 
 			if (validPay) {
@@ -228,41 +228,41 @@ public class Logic {
 			}
 			break;
 		case 3:
-			// De Home a Corral
-			if ((48 < app.mouseX && app.mouseX < 365) && (207 < app.mouseY && app.mouseY < 321)) {
+			// De Home a Margarita
+			if ((143 < app.mouseX && app.mouseX < 392) && (324 < app.mouseY && app.mouseY < 742)) {
 				extra.setExtraScreen(0);
 				screen = 4;
-				chooseCorral = true;
-				chooseBacon = false;
+				chooseMargarita = true;
+				chooseveg = false;
+				chooseChampi = false;
 				chooseCheese = false;
-				chooseChicken = false;
 			}
-			// De Home a Corral Queso
-			if ((48 < app.mouseX && app.mouseX < 365) && (354 < app.mouseY && app.mouseY < 467)) {
+			// De Home a Champi
+			if ((426 < app.mouseX && app.mouseX < 677) && (324 < app.mouseY && app.mouseY < 742)) {
 				extra.setExtraScreen(1);
 				screen = 4;
-				chooseCheese = true;
-				chooseBacon = false;
-				chooseChicken = false;
-				chooseCorral = false;
+				chooseChampi = true;
+				chooseveg = false;
+				chooseCheese = false;
+				chooseMargarita = false;
 			}
-			// De Home a Corral Tocineta
-			if ((48 < app.mouseX && app.mouseX < 365) && (500 < app.mouseY && app.mouseY < 613)) {
+			// De Home a Vegetariana
+			if ((732 < app.mouseX && app.mouseX < 981) && (324 < app.mouseY && app.mouseY < 742)) {
 				extra.setExtraScreen(2);
 				screen = 4;
-				chooseBacon = true;
+				chooseveg = true;
+				chooseChampi = false;
 				chooseCheese = false;
-				chooseChicken = false;
-				chooseCorral = false;
+				chooseMargarita = false;
 			}
-			// De Home a Corral Pollo
-			if ((48 < app.mouseX && app.mouseX < 365) && (646 < app.mouseY && app.mouseY < 760)) {
+			// De Home a Queso
+			if ((1045 < app.mouseX && app.mouseX < 1300) && (324 < app.mouseY && app.mouseY < 742)) {
 				extra.setExtraScreen(3);
 				screen = 4;
-				chooseChicken = true;
-				chooseCheese = false;
-				chooseBacon = false;
-				chooseCorral = false;
+				chooseCheese = true;
+				chooseChampi = false;
+				chooseveg = false;
+				chooseMargarita = false;
 			}
 			// De Home a History
 			if ((195 < app.mouseX && app.mouseX < 215) && (830 < app.mouseY && app.mouseY < 857)) {
@@ -276,47 +276,47 @@ public class Logic {
 			break;
 		case 4:
 			// De Extra a Home
-			if ((37 < app.mouseX && app.mouseX < 57) && (94 < app.mouseY && app.mouseY < 106)) {
+			if ((57 < app.mouseX && app.mouseX < 300) && (20 < app.mouseY && app.mouseY < 78)) {
 				screen = 3;
-				addChips = false;
-				addOnionRings = false;
-				addCheese = false;
-				addSuero = false;
-				chooseCorral = false;
+				addCoke = false;
+				addColombiana = false;
+				addChocoRoll = false;
+				addCookiePie = false;
+				chooseMargarita = false;
+				chooseChampi = false;
+				chooseveg = false;
 				chooseCheese = false;
-				chooseBacon = false;
-				chooseChicken = false;
 			}
-			// Añade papitas
+			// Añade coke
 			if ((39 < app.mouseX && app.mouseX < 376) && (415 < app.mouseY && app.mouseY < 469)) {
 				if (!validPay) {
-					addChips = true;
-					addOnionRings = false;
+					addCoke = true;
+					addColombiana = false;
 				}
 			}
-			// Añade anillos de cebolla
+			// Añade colombiana
 			if ((39 < app.mouseX && app.mouseX < 376) && (487 < app.mouseY && app.mouseY < 541)) {
 				if (!validPay) {
-					addOnionRings = true;
-					addChips = false;
+					addColombiana = true;
+					addCoke = false;
 				}
 			}
-			// Añade queso
+			// Añade chocoroll
 			if ((39 < app.mouseX && app.mouseX < 376) && (605 < app.mouseY && app.mouseY < 659)) {
 				if (!validPay) {
-					addCheese = true;
-					addSuero = false;
+					addChocoRoll = true;
+					addCookiePie = false;
 				}
 			}
-			// Añade suero
+			// Añade cookiepie
 			if ((39 < app.mouseX && app.mouseX < 376) && (677 < app.mouseY && app.mouseY < 731)) {
 				if (!validPay) {
-					addSuero = true;
-					addCheese = false;
+					addCookiePie = true;
+					addChocoRoll = false;
 				}
 			}
 			// De Extra a Extra+Pay
-			if (addChips || addOnionRings && addCheese || addSuero) {
+			if (addCoke || addColombiana && addChocoRoll || addCookiePie) {
 				if ((63 < app.mouseX && app.mouseX < 348) && (787 < app.mouseY && app.mouseY < 845)) {
 					validPay = true;
 				}
@@ -327,21 +327,21 @@ public class Logic {
 				validPay = false;
 				screen = 5;
 				// Se crea orden con Corral
-				if (chooseCorral) {
+				if (chooseMargarita) {
 					date = new Date();
 					userList.get(0).newOrder("Corral", date, 14000, 0);
 				} // Se crea orden con Corral queso
-				else if (chooseCheese) {
+				else if (chooseChampi) {
 					date = new Date();
 					userList.get(0).newOrder("Corral queso", date, 16000, 0);
 				}
 				// Se crea orden con Corral tocineta
-				else if (chooseBacon) {
+				else if (chooseveg) {
 					date = new Date();
 					userList.get(0).newOrder("Corral tocineta", date, 19000, 0);
 				}
 				// Se crea orden con Corral pollo
-				else if (chooseChicken) {
+				else if (chooseCheese) {
 					date = new Date();
 					userList.get(0).newOrder("Corral pollo", date, 15000, 0);
 				}
@@ -349,7 +349,7 @@ public class Logic {
 				int lastPos = userList.get(0).getOrderList().size() - 1;
 
 				// extras: papas y queso
-				if (addChips && addCheese) {
+				if (addCoke && addChocoRoll) {
 					userList.get(0).getOrderList().get(lastPos).addExtra1("Papas francesas", 5500);
 					userList.get(0).getOrderList().get(lastPos).addExtra2("Queso fundido", 4500);
 					userList.get(0).getOrderList().get(lastPos)
@@ -357,7 +357,7 @@ public class Logic {
 				}
 
 				// extras: papas y suero
-				else if (addChips && addSuero) {
+				else if (addCoke && addCookiePie) {
 					userList.get(0).getOrderList().get(lastPos).addExtra1("Papas francesas", 5500);
 					userList.get(0).getOrderList().get(lastPos).addExtra2("Suero costeño", 3000);
 					userList.get(0).getOrderList().get(lastPos)
@@ -365,7 +365,7 @@ public class Logic {
 				}
 
 				// extras: anillos y queso
-				else if (addOnionRings && addCheese) {
+				else if (addColombiana && addChocoRoll) {
 					userList.get(0).getOrderList().get(lastPos).addExtra1("Anillos de cebolla", 7500);
 					userList.get(0).getOrderList().get(lastPos).addExtra2("Queso fundido", 4500);
 					userList.get(0).getOrderList().get(lastPos)
@@ -373,7 +373,7 @@ public class Logic {
 				}
 
 				// extras: anillos y suero
-				else if (addOnionRings && addSuero) {
+				else if (addColombiana && addCookiePie) {
 					userList.get(0).getOrderList().get(lastPos).addExtra1("Anillos de cebolla", 7500);
 					userList.get(0).getOrderList().get(lastPos).addExtra2("Suero costeño", 3000);
 					userList.get(0).getOrderList().get(lastPos)
@@ -386,14 +386,14 @@ public class Logic {
 			// De Summary a Home
 			if ((63 < app.mouseX && app.mouseX < 348) && (755 < app.mouseY && app.mouseY < 814)) {
 				screen = 3;
-				addChips = false;
-				addOnionRings = false;
-				addCheese = false;
-				addSuero = false;
-				chooseCorral = false;
+				addCoke = false;
+				addColombiana = false;
+				addChocoRoll = false;
+				addCookiePie = false;
+				chooseMargarita = false;
+				chooseChampi = false;
+				chooseveg = false;
 				chooseCheese = false;
-				chooseBacon = false;
-				chooseChicken = false;
 			}
 			break;
 		case 6:
